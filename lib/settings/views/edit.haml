@@ -1,0 +1,9 @@
+%h1= @funpack.name
+
+%form.form-horizontal(action="/" method="POST")
+  - for setting in @funpack.definitions
+    .control-group
+      = setting(setting)
+      
+  .form-actions
+    %button.btn.btn-primary(type="submit") Create Settings
